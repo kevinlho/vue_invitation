@@ -24,7 +24,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="footer">
+  <div class="root-container">
     <div class="imageChild">
       <img alt="Vue logo" class="imageClass" src="@/assets/icon/wedding-invitation.png"/>
     </div>
@@ -43,10 +43,11 @@ defineProps({
   </div>
 </template>
 
-<style scoped>
-.footer {
-  max-width: 90vw;
-  background-color: lightgrey;
+<style scoped lang="scss">
+@import "@/scss/variable.scss";
+.root-container {
+  max-width: 80vw;
+  background-color: $footer_bg;
   margin: auto;
   border-radius: 20px 20px 0 0;
   display: flex;
@@ -58,7 +59,7 @@ defineProps({
   right: 0;
 }
 
-.footer div{
+.root-container div{
   margin: 10px;
 }
 
@@ -70,12 +71,14 @@ defineProps({
 .imageClass{
   width: 25px;
   height: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 @media (min-width: 1024px) {
-  .footer {
-    max-width: 70vw;
-    background-color: lightgrey;
+  .root-container {
+    max-width: 65vw;
+    background-color: $footer_bg;
     margin: auto;
     border-radius: 20px 20px 0 0;
     display: flex;
@@ -88,13 +91,15 @@ defineProps({
   }
 
   .imageChild{
-    min-width: 50px;
-    min-height: 50px;
+    min-width: 40px;
+    min-height: 40px;
   }
 
   .imageClass{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 </style>
