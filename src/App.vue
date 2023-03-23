@@ -1,6 +1,8 @@
 <script setup>
-import Home from './views/Home.vue'
-import Profile from "./views/Profile.vue";
+import Home from './views_style_golde/Home.vue'
+import Profile from "./views_style_golde/Profile.vue";
+import Countdown from "./views_style_golde/Countdown.vue";
+import Venue from "./views_style_golde/Venue.vue";
 
 import BottomNavbar from './components/BottomNavbar.vue'
 
@@ -24,6 +26,8 @@ import BottomNavbar from './components/BottomNavbar.vue'
   <div class="rootContainer">
     <Home/>
     <Profile/>
+    <Countdown/>
+    <Venue/>
   </div>
   <BottomNavbar msg="n" />
 </template>
