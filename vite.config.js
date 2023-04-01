@@ -20,5 +20,8 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
       'assets': path.resolve('./src/assets')
     }
+  },
+  server: {
+    host: true
   }
 })

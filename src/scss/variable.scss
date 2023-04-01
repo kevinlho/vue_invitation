@@ -1,5 +1,6 @@
 //home
 $home_bg : yellow;
+$home_card : white;
 
 //profile
 $profile_bg: #c8a67c;
@@ -12,4 +13,9 @@ $seperator1: #3a3a3a;
 
 //static
 $yellow : yellow;
-$black: #000000
+$black: #000000;
+$gold: rgb(197, 167, 87);
+
+.goldText{
+  color: $gold;
+}

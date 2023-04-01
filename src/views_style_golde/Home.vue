@@ -1,77 +1,108 @@
-<script setup>
-defineProps({
-  home: {
-    type: String,
-    required: false
+<script>
+
+export default {
+  data(){
+    return{
+      title: "Tie The Knot",
+      body: "he KnotTie The Knot The KnotTie The Knot The KnotTie The Knot The KnotTie The Knot The KnotTie The Knot The KnotTie The Knot The KnotTie The Knot The KnotTie The Knot"
+    }
+  },
+  mounted() {},
+  methods:{
+    loadPhoto(){}
   }
-})
+}
 </script>
 
 <template>
-  <div class="container-root">
-    <div class="container-card">
-      <div class="card-text">
-        <div class="text-h3 text-center">Tie The Knot</div>
-        <div class="d-flex flex-row align-center justify-center">
-          <div class="border-seperator flex-grow-1"/>
-          <v-icon icon="mdi-vuetify"></v-icon>
-          <div class="border-seperator flex-grow-1"/>
-        </div>
-        <div class="text-h8 text-center">
-          (QS Ar-Rum : 21) (QS Ar-Rum : 21)(QS Ar-Rum : 21)(QS Ar-Rum : 21)(QS Ar-Rum : 21)  )(QS Ar-Rum : 21)(QS Ar-Rum : 21) )(QS Ar-Rum : 21)(QS Ar-Rum : 21) )(QS Ar-Rum : 21)(QS Ar-Rum : 21) )(QS Ar-Rum : 21)(QS Ar-Rum : 21) )(QS Ar-Rum : 21)(QS Ar-Rum : 21) (QS Ar-Rum : 21)
-        </div>
-        <div>
-          (QS Ar-Rum : 21)
-        </div>
-      </div>
-      <div class="card-image">
-        <img
-            width="300"
-            height="400"
-            src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-        />
-      </div>
-    </div>
-  </div>
+  <v-container class="container-root">
+    <v-card class="container-card">
+        <v-col>
+          <v-row class="text-h2 align-center justify-center">
+            <p class="creattionFonts goldText">{{title}}</p>
+          </v-row>
+          <v-row class="py-5 align-center justify-center">
+            <v-col class="pa-0 ma-0 border-seperator"/>
+            <v-icon
+                class="goldText"
+                icon="mdi-bookmark"
+                size="50"
+            />
+            <v-col class="pa-0 ma-0 border-seperator"/>
+          </v-row>
+          <v-row class="align-center justify-center">
+            <p class="text-center card-text">
+              {{body}}
+            </p>
+          </v-row>
+        </v-col>
+        <v-col>
+          <v-img
+              style="border-radius: 10px"
+              class="ma-auto"
+              src="./src/assets/background/home_bg.jpg"
+              :width="350"
+              aspect-ratio="0.8"
+              cover
+          />
+        </v-col>
+    </v-card>
+  </v-container>
 </template>
 
 <style scoped lang="scss">
 @import "@/scss/variable.scss";
+
 .container-root{
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
 }
 
 .container-card{
-  background-color: $profile_bg;
+  background-color: $home_card;
   width: 90vw;
-  height: 85vh;
+  min-height: 75vh;
   display: flex;
-  padding : 10px 20px 20px 10px;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 30px 15px 30px 15px;
+}
+
+.card-image{
+  background-color: red;
+  max-height: 45vh;
+  flex-grow: 1;
+  display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
 }
 
-.card-header{
-
+.border-seperator{
+  flex-grow: 1;
+  max-width: 25vw;
+  height: 1px;
+  border-width: 1px;
+  border-color: $black;
+  border-style: solid;
 }
 
 @media (min-width: 1024px) {
   .container-root{
     display: flex;
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
   }
 
   .container-card{
-    background-color: $profile_bg;
+    background-color: $home_card;
     width: 85vw;
     height: 85vh;
     display: flex;
@@ -92,13 +123,13 @@ defineProps({
   }
 
   .card-text{
-    max-width: 42.5vw;
-    background-color: blue;
-    flex-grow: 1;
+    max-width: 35vw;
   }
 
   .card-image{
-    max-width: 42.5vw;
+    max-width: 30vw;
+    max-height: 75vh;
+    overflow: hidden;
     background-color: red;
     flex-grow: 1;
     display: flex;
