@@ -1,110 +1,118 @@
-<script setup>
+<script>
 import HeartHeader from '@/components/HeartHeader.vue'
 
+export default {
+  components:{
+    HeartHeader
+  },
+  data(){
+    return{
+      titleQuotes: {
+        title: "Groom & Bride",
+        msg: "he KnotTie The Knot he KnotTie The Knot he KnotTie The Knot he KnotTie The Knothe KnotTie The Knot he KnotTie The Knot The KnotTie The Knot The KnotTie The Knot The KnotTie The Knot The KnotTie The Knot The KnotTie The Knot The KnotTie",
+        quotes: "-Quotes"
+      },
+      groomDetail:{
+        name: "Kevin Susanto",
+        father: "Heri Susanto",
+        mother: "Herlina Gozali"
+      },
+      brideDetail:{
+        name: "Tiffany Thunung Pitoby",
+        father: "Heri Susanto",
+        mother: "Herlina Gozali"
+      }
+    }
+  },
+  mounted() {
+    console.log(this.$vuetify)
+    console.log(this.$vuetify)
+  },
+  methods:{
+    imageWidth () {
+      return window.innerWidth * 0.3
+    },
+    imageHeight () {
+      return window.innerHeight * 0.4
+    },
+    loadPhoto(){}
+  }
+}
 </script>
 
 <template>
-  <div>
-    <HeartHeader/>
-    <div class="rootContainer">
-      <div class="textQuotesParent">
-        <div class="text-h5">The Beloved</div>
-        <div class="text-h3">Groom & Bride</div>
-        <div class="textQuotes">
-          <div class="my-3 text-center">Random Quotes Random Quotes Random Quotes Random Quotes</div>
-          <div class="mt-3 mb-10">-SI RANDOM</div>
-        </div>
+  <HeartHeader/>
+  <v-container class="ma-0 pa-0 container-root">
+    <v-col class="py-10">
+      <div class="text-h3">
+        <p class="quotesTitle creattionFonts goldText text-center">{{titleQuotes.title}}</p>
       </div>
-      <div class="profileContainer">
-        <div>
-          <v-img
-              class="profileImage"
-              width="30vw"
-              height="40vw"
-              cover
-              src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-          />
-          <div style="padding-top: 15px">
-            <div class="text-h6">Groom's Name</div>
-            <div class="borderSeperator"/>
-            <div>
-              <span>Son of</span>
-            </div>
-            <div>
-              <span>Groom's Father</span>
-            </div>
-            <div>
-              <span>Groom's Mother</span>
-            </div>
-          </div>
-        </div>
-        <div class="flex-grow-0">
-          <span>&</span>
-        </div>
-        <div>
-          <v-img
-              class="profileImage"
-              width="30vw"
-              height="40vw"
-              cover
-              src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-          />
-          <div style="padding-top: 15px">
-            <div>
-              <span class="text-h6">Bride's Name</span>
-            </div>
-            <div class="borderSeperator"/>
-            <div>
-              <span>Daughter of</span>
-            </div>
-            <div>
-              <span>Bride's Father</span>
-            </div>
-            <div>
-              <span>Bride's Mother</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <p class="quotesMsg text-center">{{titleQuotes.msg}}</p>
+      <p class="quotesDesc text-center">{{titleQuotes.quotes}}</p>
+    </v-col>
+    <div class="container-profile">
+      <v-col>
+        <v-img
+            class="profileImage"
+            cover
+            src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+        />
+        <v-col style="padding-top: 15px">
+          <p class="text-h6">{{groomDetail.name}}</p>
+          <div class="borderSeperator"/>
+          <p>Son of</p>
+          <p>{{groomDetail.father}}</p>
+          <p>&</p>
+          <p>{{groomDetail.mother}}</p>
+        </v-col>
+      </v-col>
+      <v-col>
+        <v-img
+            class="profileImage"
+            cover
+            src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+        />
+        <v-col style="padding-top: 15px">
+          <p class="text-h6">{{brideDetail.name}}</p>
+          <div class="borderSeperator"/>
+          <p>Daughter of</p>
+          <p>{{brideDetail.father}}</p>
+          <p>&</p>
+          <p>{{brideDetail.mother}}</p>
+        </v-col>
+      </v-col>
     </div>
-  </div>
+  </v-container>
 </template>
 
 <style scoped lang="scss">
 @import "@/scss/variable.scss";
 
 @media (max-width: 1023px) {
-  .rootContainer{
-    width: 100vw;
-    min-height: 100vh;
-    padding-top: 15vh;
+  .container-root{
+    min-width: 100vw;
     background-color: $profile_bg;
   }
 
-  .textQuotesParent{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .quotesTitle{
+    padding: 30px 0 30px 0;
   }
 
-  .textQuotes{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 80vw;
+  .quotesMsg{
+    width: 75vw;
+    margin: auto;
   }
 
-  .profileContainer{
+  .quotesQ{
+
+  }
+
+  .container-profile{
     width: 100vw;
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 15vh;
+    padding-bottom: 5vh;
   }
 
-  .profileContainer div{
-    flex-grow: 1;
+  .container-profile div{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,7 +120,9 @@ import HeartHeader from '@/components/HeartHeader.vue'
   }
 
   .profileImage{
-    border-radius: 10px;
+    width: 60vw;
+    height: 80vw;
+    border-radius: 20% 20% 10px 10px;;
   }
 
   .borderSeperator{
@@ -125,35 +135,32 @@ import HeartHeader from '@/components/HeartHeader.vue'
 }
 
 @media (min-width: 1024px) {
-  .rootContainer{
-    width: 100vw;
-    min-height: 100vh;
-    padding-top: 5vh;
+  .container-root{
+    min-width: 100vw;
     background-color: $profile_bg;
   }
 
-  .textQuotesParent{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .quotesTitle{
+    padding: 30px 0 30px 0;
   }
 
-  .textQuotes{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 80vw;
+  .quotesMsg{
+    width: 75vw;
+    margin: auto;
   }
 
-  .profileContainer{
+  .quoteQ{
+
+  }
+
+  .container-profile{
     width: 100vw;
     display: flex;
     flex-direction: row;
     padding-bottom: 15vh;
   }
 
-  .profileContainer div{
+  .container-profile div{
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -162,7 +169,9 @@ import HeartHeader from '@/components/HeartHeader.vue'
   }
 
   .profileImage{
-    border-radius: 10px;
+    width: 30vw;
+    height: 40vw;
+    border-radius: 20% 20% 10px 10px;
   }
 
   .borderSeperator{

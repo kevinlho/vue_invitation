@@ -16,16 +16,10 @@ export default {
     BottomNavbar
   },
   data() {
-    return {
-      count: 0
-    }
+    return {}
   },
   mounted() {},
-  methods: {
-    increment() {
-      this.count++
-    }
-  }
+  methods: {}
 }
 </script>
 
