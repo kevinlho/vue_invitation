@@ -27,7 +27,6 @@ export default {
   <div class="rootContainer">
     <Home/>
     <Profile/>
-    <Countdown/>
     <Venue/>
   </div>
   <BottomNavbar msg="n" />

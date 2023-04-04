@@ -24,19 +24,8 @@ export default {
       }
     }
   },
-  mounted() {
-    console.log(this.$vuetify)
-    console.log(this.$vuetify)
-  },
-  methods:{
-    imageWidth () {
-      return window.innerWidth * 0.3
-    },
-    imageHeight () {
-      return window.innerHeight * 0.4
-    },
-    loadPhoto(){}
-  }
+  mounted() {},
+  methods:{}
 }
 </script>
 
