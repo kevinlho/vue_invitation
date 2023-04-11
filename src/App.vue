@@ -1,8 +1,9 @@
 <script>
 import Home from './views_style_golde/Home.vue'
 import Profile from "./views_style_golde/Profile.vue";
-import Countdown from "./views_style_golde/Countdown.vue";
 import Venue from "./views_style_golde/Venue.vue";
+import Reservation from "./views_style_golde/Reservation.vue";
+import Countdown from "./views_style_golde/Countdown.vue";
 
 import BottomNavbar from './components/BottomNavbar.vue'
 
@@ -11,8 +12,9 @@ export default {
   components: {
     Home,
     Profile,
-    Countdown,
     Venue,
+    Reservation,
+    Countdown,
     BottomNavbar
   },
   data() {
@@ -28,6 +30,8 @@ export default {
     <Home/>
     <Profile/>
     <Venue/>
+    <Reservation/>
+    <Countdown/>
   </div>
   <BottomNavbar msg="n" />
 </template>
@@ -47,6 +51,7 @@ export default {
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
+  padding-bottom: 50px;
 }
 
 @media (min-width: 1024px) {
@@ -62,6 +67,7 @@ export default {
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
+    padding-bottom: 50px;
   }
 }
 </style>

@@ -1,27 +1,18 @@
 <script>
-import HeartHeader from '@/components/HeartHeader.vue'
 
 export default {
   components:{},
   data(){
     return{
-      titleQuotes: {
-        title: "Groom & Bride",
-        msg: "he KnotTie The Knot he KnotTie The Knot he KnotTie The Knot he KnotTie The Knothe KnotTie The Knot he KnotTie The Knot The KnotTie The Knot The KnotTie The Knot The KnotTie The Knot The KnotTie The Knot The KnotTie The Knot The KnotTie",
-        quotes: "-Quotes"
+      akad:{
+        date: "Sunday, December 31st 2023",
+        time: "09.00 WIB",
+        venue: "Auditorium Poltekkes Medan Jl. Jamin Ginting Km. 13,5 Kelurahan Lau Cih, Kecamatan Medan Tuntungan, Kota Medan"
       },
-      groomDetail:{
-        name: "Kevin Susanto",
-        father: "Heri Susanto",
-        mother: "Herlina Gozali"
-      },
-      brideDetail:{
-        name: "Tiffany Thunung Pitoby",
-        father: "Heri Susanto",
-        mother: "Herlina Gozali"
-      },
-      image:{
-        rings: require(`@/assets/icon/wedding-invitation.png`)
+      reception:{
+        date: "Sunday, December 31st 2023",
+        time: "09.00 WIB",
+        venue: "Auditorium Poltekkes Medan Jl. Jamin Ginting Km. 13,5 Kelurahan Lau Cih, Kecamatan Medan Tuntungan, Kota Medan"
       }
     }
   },
@@ -32,43 +23,58 @@ export default {
 
 <template>
   <v-container class="ma-0 pa-0 container-root">
-    <v-card class="container-card-outer my-5">
-      <v-col class="py-10">
-        <p class="goldText text-center">Which will be held on</p>
-      </v-col>
-      <v-card class="container-card-inner py-5">
-        <v-col>
-          <v-img
-              class="profileImage ma-auto"
-              aspect-ratio="1"
-              cover
-              :src="require(`../assets/icon/wedding-profile.png`)"
-          />
-          <v-col class="text-center" style="padding-top: 15px">
-            <p class="text-h6">{{groomDetail.name}}</p>
-            <div class="borderSeperator mx-auto"/>
-            <p>Son of</p>
-            <p>{{groomDetail.father}}</p>
-            <p>&</p>
-            <p>{{groomDetail.mother}}</p>
-          </v-col>
-        </v-col>
-        <v-col>
-          <v-img
-              class="profileImage ma-auto"
-              cover
-              src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-          />
-          <v-col class="text-center" style="padding-top: 15px">
-            <p class="text-h6">{{groomDetail.name}}</p>
-            <div class="borderSeperator mx-auto"/>
-            <p>Son of</p>
-            <p>{{groomDetail.father}}</p>
-            <p>&</p>
-            <p>{{groomDetail.mother}}</p>
-          </v-col>
-        </v-col>
-      </v-card>
+    <v-card class="container-card my-5">
+      <div>
+        <p class="text-center pt-10">Which will be held on</p>
+        <div class="container-card-outer py-5">
+          <v-card class="container-card-inner my-6 mx-4">
+            <v-col>
+              <v-img
+                  class="profileImage ma-auto my-5"
+                  aspect-ratio="1"
+                  src="./src/assets/icon/wedding-ring.png"
+              />
+              <v-col class="text-center" style="padding-top: 15px">
+                <p class="text-h6">Akad</p>
+                <p>{{akad.date}}</p>
+                <p>{{akad.time}}</p>
+                <p class="py-10">{{akad.venue}}</p>
+                <v-row class="button-direction my-5 mx-3">
+                  <v-icon
+                      class="goldText"
+                      icon="mdi-map-marker-radius"
+                      size="50"
+                  />
+                  <p>Get Direction</p>
+                </v-row>
+              </v-col>
+            </v-col>
+          </v-card>
+          <v-card class="container-card-inner my-6 mx-4">
+            <v-col>
+              <v-img
+                  class="profileImage ma-auto my-5"
+                  aspect-ratio="1"
+                  src="./src/assets/icon/wedding-ring.png"
+              />
+              <v-col class="text-center" style="padding-top: 15px">
+                <p class="text-h6">Reception</p>
+                <p>{{reception.date}}</p>
+                <p>{{reception.time}}</p>
+                <p class="py-10">{{akad.venue}}</p>
+                <v-row class="button-direction my-5 mx-3">
+                  <v-icon
+                      class="goldText"
+                      icon="mdi-map-marker-radius"
+                      size="50"
+                  />
+                  <p>Get Direction</p>
+                </v-row>
+              </v-col>
+            </v-col>
+          </v-card>
+        </div>
+      </div>
     </v-card>
   </v-container>
 </template>
@@ -81,18 +87,19 @@ export default {
     min-width: 100vw;
   }
 
-  .container-card-outer{
+  .container-card{
+    background-color: $venue_card_inner;
     max-width: 90vw;
-    background-color: $venue_card_outer;
+    margin: auto;
+  }
+
+  .container-card-outer{
+    max-width: 80vw;
     border-radius: 20px;
     margin: auto;
   }
 
   .container-card-inner{
-    max-width: 80vw;
-    background-color: $venue_card_inner;
-    border-radius: 20px;
-    margin: auto;
   }
 
   .container-profile{
@@ -109,8 +116,8 @@ export default {
   }
 
   .profileImage{
-    width: 60vw;
-    height: 80vw;
+    width: 15vw;
+    height: 15vw;
     border-radius: 20% 20% 10px 10px;;
   }
 
@@ -121,12 +128,41 @@ export default {
     margin-top: 3vh;
     margin-bottom: 3vh;
   }
+
+  .button-direction{
+    background-color: #3a3a3a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+  }
 }
 
 @media (min-width: 1024px) {
   .container-root{
     min-width: 100vw;
-    background-color: $profile_bg;
+  }
+
+  .container-card{
+    background-color: $venue_card_inner;
+    max-width: 85vw;
+    margin: auto;
+    padding-bottom: 25px;
+  }
+
+  .container-card-outer{
+    display: flex;
+    flex-direction: row;
+    max-width: 80vw;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin: auto;
+  }
+
+  .container-card-inner{
+    display: flex;
+    flex-direction: row;
   }
 
   .container-profile{
@@ -145,8 +181,8 @@ export default {
   }
 
   .profileImage{
-    width: 30vw;
-    height: 40vw;
+    width: 15vw;
+    height: 15vw;
     border-radius: 20% 20% 10px 10px;
   }
 
@@ -156,6 +192,14 @@ export default {
     background-color: #3a3a3a;
     margin-top: 3vh;
     margin-bottom: 3vh;
+  }
+
+  .button-direction{
+    background-color: #3a3a3a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
   }
 }
 </style>

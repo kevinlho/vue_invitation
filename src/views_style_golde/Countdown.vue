@@ -1,91 +1,114 @@
-<script setup>
+<script>
 
+export default {
+  components:{},
+  data(){
+    return{
+      date:{
+        day: "05",
+        month: "08",
+        year: "2023",
+      },
+      counter:{
+        seconds: "02",
+        minutes: "02",
+        hours: "02",
+        days: "365"
+      }
+    }
+  },
+  mounted() {},
+  methods:{},
+  computed:{
+    temtems(){
+      return[
+        "1","2","3"
+      ]
+    }
+  }
+}
 </script>
 
 <template>
-  <div class="rootContainer">
-    <div class="textQuotes">
-      <div class="text-h5">Countdown to</div>
-      <div class="text-h3">Our Happy Day</div>
-      <div class="countdownContainer">
-        <div>
-          <div class="text-h4">000</div>
-          <div class="text-h6">Days</div>
-        </div>
-        <div>
-          <div class="text-h4">00</div>
-          <div class="text-h6">Hours</div>
-        </div>
-        <div>
-          <div class="text-h4">00</div>
-          <div class="text-h6">Minutes</div>
-        </div>
-        <div>
-          <div class="text-h4">00</div>
-          <div class="text-h6">Seconds</div>
-        </div>
+  <v-container class="ma-0 pa-0 container-root">
+    <v-card class="container-card my-5">
+      <div class="text-h3">
+        <p class="text-center pt-10 creattionFonts">Counting down to our happy day!</p>
+        <v-row class="container-countdown ma-auto pt-10">
+          <v-col class="container-countdown-child">
+            <p class="text-h5 text-center">{{counter.days}}</p>
+            <p class="fontsize-countdown-static text-center">Days</p>
+          </v-col>
+          <v-col class="container-countdown-child">
+            <p class="text-h5 text-center">{{counter.hours}}</p>
+            <p class="fontsize-countdown-static text-center">Hours</p>
+          </v-col>
+          <v-col class="container-countdown-child">
+            <p class="text-h5 text-center">{{counter.minutes}}</p>
+            <p class="fontsize-countdown-static text-center">Minutes</p>
+          </v-col>
+          <v-col class="container-countdown-child">
+            <p class="text-h5 text-center">{{counter.seconds}}</p>
+            <p class="fontsize-countdown-static text-center">Seconds</p>
+          </v-col>
+        </v-row>
       </div>
-    </div>
-  </div>
+    </v-card>
+  </v-container>
 </template>
 
 <style scoped lang="scss">
 @import "@/scss/variable.scss";
 
 @media (max-width: 1023px) {
-  .rootContainer{
-    padding-top: 15vh;
-    background-color: $profile_bg;
+  .container-root{
+    min-width: 100vw;
   }
 
-  .textQuotes{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .container-card{
+    background-color: $venue_card_inner;
+    max-width: 90vw;
+    margin: auto;
+  }
+
+  .container-countdown{
+    max-width: 50vw;
+  }
+
+  .container-countdown-child{
     background-color: red;
+    border-radius: 10px;
   }
 
-  .countdownContainer{
-    width: 80vw;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 5vh;
-  }
-
-  .countdownText{}
-
-  .countdownContainer div div{
-    display: flex;
-    justify-content: center;
+  .fontsize-countdown-static{
+    font-size: 10px;
   }
 }
 
 @media (min-width: 1024px) {
-  .rootContainer{
-    padding-top: 5vh;
-    background-color: $profile_bg;
+  .container-root{
+    min-width: 100vw;
   }
 
-  .textQuotes{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .container-card{
+    background-color: $venue_card_inner;
+    max-width: 85vw;
+    margin: auto;
+    padding-bottom: 25px;
   }
 
-  .countdownContainer{
-    width: 50vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 10vh;
+  .container-countdown{
+    max-width: 50vw;
   }
 
-  .countdownContainer div div{
-    display: flex;
-    justify-content: center;
-    padding: 0 20px 0 20px;
+  .container-countdown-child{
+    background-color: red;
+    border-radius: 10px;
+  }
+
+  .fontsize-countdown-static{
+    font-size: 12px;
   }
 }
+
 </style>
