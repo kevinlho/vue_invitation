@@ -7,9 +7,9 @@ import Countdown from "./views_style_golde/Countdown.vue";
 
 import BottomNavbar from './components/BottomNavbar.vue'
 
-import Sample01 from './assets/music/sample01.mp3'
+import SelectedMusic from './assets/music/beautiful_in_white.mp3'
 
-const audioPlayer = new Audio(Sample01)
+const audioPlayer = new Audio(SelectedMusic)
 
 export default {
   components: {
@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     playSound(playSound){
-      const player = new Audio(Sample01)
+      let player = new Audio(Sample01)
       player.play()
       // if (playSound){
       //   audioPlayer.play()
