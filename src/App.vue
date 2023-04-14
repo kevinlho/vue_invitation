@@ -21,17 +21,23 @@ export default {
     BottomNavbar
   },
   data() {
-    return {}
+    return {
+      soundPlaying: true
+    }
   },
   mounted() {
-    this.playSound(true);
+    this.playSound(true)
   },
   methods: {
-    playSound(playStatus){
-      if(playStatus){
-        const audio = new Audio(Sample01);
-        audio.play()
-      }
+    playSound(playSound){
+      const player = new Audio(Sample01)
+      player.play()
+      // if (playSound){
+      //   audioPlayer.play()
+      // }
+      // else {
+      //   audioPlayer.pause()
+      // }
     }
   },
 }
