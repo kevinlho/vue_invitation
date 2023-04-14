@@ -40,7 +40,7 @@ export default {
           <v-img
               style="border-radius: 10px"
               class="ma-auto"
-              src="./src/assets/background/home_bg.jpg"
+              src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
               :width="350"
               aspect-ratio="0.8"
               cover

@@ -7,6 +7,9 @@ import Countdown from "./views_style_golde/Countdown.vue";
 
 import BottomNavbar from './components/BottomNavbar.vue'
 
+import Sample01 from './assets/music/sample01.mp3'
+
+const audioPlayer = new Audio(Sample01)
 
 export default {
   components: {
@@ -20,8 +23,17 @@ export default {
   data() {
     return {}
   },
-  mounted() {},
-  methods: {}
+  mounted() {
+    this.playSound(true);
+  },
+  methods: {
+    playSound(playStatus){
+      if(playStatus){
+        const audio = new Audio(Sample01);
+        audio.play()
+      }
+    }
+  },
 }
 </script>
 
