@@ -1,9 +1,9 @@
 //home
-$home_bg : yellow;
+$home_bg : #ebb4ae;
 $home_card : white;
 
 //profile
-$profile_bg: black;
+$profile_bg :#f0e5df;
 
 //venue
 $venue_card_outer: #e7b2ac;
@@ -25,4 +25,8 @@ $gold: rgb(197, 167, 87);
 
 .goldText{
   color: $gold;
+}
+
+.defaultText{
+  color: #363636;
 }

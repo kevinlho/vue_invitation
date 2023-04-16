@@ -4,12 +4,10 @@ import Profile from "./views_style_golde/Profile.vue";
 import Venue from "./views_style_golde/Venue.vue";
 import Reservation from "./views_style_golde/Reservation.vue";
 import Countdown from "./views_style_golde/Countdown.vue";
+import Gift from "./views_style_golde/Gift.vue";
 
 import BottomNavbar from './components/BottomNavbar.vue'
-
-import SelectedMusic from './assets/music/beautiful_in_white.mp3'
-
-const audioPlayer = new Audio(SelectedMusic)
+import SoundPlayer from './components/SoundPlayer.vue'
 
 export default {
   components: {
@@ -18,28 +16,19 @@ export default {
     Venue,
     Reservation,
     Countdown,
-    BottomNavbar
+    BottomNavbar,
+    SoundPlayer
   },
   data() {
     return {
-      soundPlaying: true
+      sound:{
+        play: false,
+        duration: 0
+      }
     }
   },
-  mounted() {
-    this.playSound(true)
-  },
-  methods: {
-    playSound(playSound){
-      let player = new Audio(Sample01)
-      player.play()
-      // if (playSound){
-      //   audioPlayer.play()
-      // }
-      // else {
-      //   audioPlayer.pause()
-      // }
-    }
-  },
+  mounted() {},
+  methods: {},
 }
 </script>
 
@@ -51,6 +40,7 @@ export default {
     <Reservation/>
     <Countdown/>
   </div>
+  <SoundPlayer/>
   <BottomNavbar msg="n" />
 </template>
 
@@ -60,9 +50,10 @@ export default {
 .rootContainer{
   width: 100vw;
   background-image: linear-gradient(
-          rgba(0, 0, 0, 0.5),
-          rgba(0, 0, 0, 0.5)
-  ),url("@/assets/background/home_bg.jpg");
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0)
+  ),url("@/assets/background/orchid_bg.png");
+  background-color: $home_bg;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -76,9 +67,10 @@ export default {
   .rootContainer{
     width: 100vw;
     background-image: linear-gradient(
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-    ),url("@/assets/background/home_bg.jpg");
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0)
+    ),url("@/assets/background/orchid_bg.png");
+    background-color: $home_bg;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
