@@ -4,12 +4,10 @@ import Profile from "./views_style_golde/Profile.vue";
 import Venue from "./views_style_golde/Venue.vue";
 import Reservation from "./views_style_golde/Reservation.vue";
 import Countdown from "./views_style_golde/Countdown.vue";
+import Gift from "./views_style_golde/Gift.vue";
 
 import BottomNavbar from './components/BottomNavbar.vue'
-
-import Sample01 from './assets/music/sample01.mp3'
-
-const audioPlayer = new Audio(Sample01)
+import SoundPlayer from './components/SoundPlayer.vue'
 
 export default {
   components: {
@@ -18,22 +16,20 @@ export default {
     Venue,
     Reservation,
     Countdown,
-    BottomNavbar
+    Gift,
+    BottomNavbar,
+    SoundPlayer
   },
   data() {
-    return {}
-  },
-  mounted() {
-    this.playSound(true);
-  },
-  methods: {
-    playSound(playStatus){
-      if(playStatus){
-        const audio = new Audio(Sample01);
-        audio.play()
+    return {
+      sound:{
+        play: false,
+        duration: 0
       }
     }
   },
+  mounted() {},
+  methods: {},
 }
 </script>
 
@@ -44,7 +40,9 @@ export default {
     <Venue/>
     <Reservation/>
     <Countdown/>
+    <Gift/>
   </div>
+  <SoundPlayer/>
   <BottomNavbar msg="n" />
 </template>
 
@@ -54,9 +52,10 @@ export default {
 .rootContainer{
   width: 100vw;
   background-image: linear-gradient(
-          rgba(0, 0, 0, 0.5),
-          rgba(0, 0, 0, 0.5)
-  ),url("@/assets/background/home_bg.jpg");
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0)
+  ),url("@/assets/background/orchid_bg.png");
+  background-color: $home_bg;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -70,9 +69,10 @@ export default {
   .rootContainer{
     width: 100vw;
     background-image: linear-gradient(
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
-    ),url("@/assets/background/home_bg.jpg");
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0)
+    ),url("@/assets/background/orchid_bg.png");
+    background-color: $home_bg;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;

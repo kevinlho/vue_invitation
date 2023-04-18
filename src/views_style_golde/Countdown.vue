@@ -32,27 +32,25 @@ export default {
 <template>
   <v-container class="ma-0 pa-0 container-root">
     <v-card class="container-card my-5">
-      <div class="text-h3">
-        <p class="text-center pt-10 creattionFonts">Counting down to our happy day!</p>
-        <v-row class="container-countdown ma-auto pt-10">
-          <v-col class="container-countdown-child">
-            <p class="text-h5 text-center">{{counter.days}}</p>
-            <p class="fontsize-countdown-static text-center">Days</p>
-          </v-col>
-          <v-col class="container-countdown-child">
-            <p class="text-h5 text-center">{{counter.hours}}</p>
-            <p class="fontsize-countdown-static text-center">Hours</p>
-          </v-col>
-          <v-col class="container-countdown-child">
-            <p class="text-h5 text-center">{{counter.minutes}}</p>
-            <p class="fontsize-countdown-static text-center">Minutes</p>
-          </v-col>
-          <v-col class="container-countdown-child">
-            <p class="text-h5 text-center">{{counter.seconds}}</p>
-            <p class="fontsize-countdown-static text-center">Seconds</p>
-          </v-col>
-        </v-row>
-      </div>
+        <div class="text-h5 text-md-h3"><p class="text-center pt-10 creattionFonts">Counting down to our happy day!</p></div>
+        <v-row class="mx-5 my-3 align-center justify-center">
+            <div class="container-countdown-child">
+              <div class="text-md-h4 text-center">{{counter.days}}</div>
+              <div class="text-center" style="font-size: 10px">Days</div>
+            </div>
+            <div class="container-countdown-child">
+              <div class="text-md-h4 text-center">{{counter.days}}</div>
+              <div class="text-center" style="font-size: 10px">Hours</div>
+            </div>
+            <div class="container-countdown-child">
+              <div class="text-md-h4 text-center">{{counter.days}}</div>
+              <div class="text-center" style="font-size: 10px">Minutes</div>
+            </div>
+            <div class="container-countdown-child">
+              <div class="text-md-h4 text-center">{{counter.days}}</div>
+              <div class="text-center" style="font-size: 10px">Seconds</div>
+            </div>
+          </v-row>
     </v-card>
   </v-container>
 </template>
@@ -71,17 +69,14 @@ export default {
     margin: auto;
   }
 
-  .container-countdown{
-    max-width: 50vw;
-  }
+  .container-countdown{}
 
   .container-countdown-child{
+    width: 24%;
+    padding: 5px 0 5px 0;
+    margin: 5px 1px 5px 1px;
     background-color: red;
     border-radius: 10px;
-  }
-
-  .fontsize-countdown-static{
-    font-size: 10px;
   }
 }
 
@@ -102,13 +97,12 @@ export default {
   }
 
   .container-countdown-child{
+    padding: 10px 35px 10px 35px;
+    margin: 5px 10px 5px 10px;
     background-color: red;
     border-radius: 10px;
   }
 
-  .fontsize-countdown-static{
-    font-size: 12px;
-  }
 }
 
 </style>
