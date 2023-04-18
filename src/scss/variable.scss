@@ -12,6 +12,9 @@ $venue_card_inner: #f1dcda;
 //reservation
 $reservation_card_comment: #f2f1ee;
 
+//gift
+$gift_card_bankinfo: #a21616;
+
 //footer
 $footer_bg : lightgrey;
 
@@ -25,6 +28,10 @@ $gold: rgb(197, 167, 87);
 
 .goldText{
   color: $gold;
+}
+
+.whiteText{
+  color: #dddddd;
 }
 
 .defaultText{
