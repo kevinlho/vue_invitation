@@ -5,6 +5,7 @@ import Venue from "./views_style_golde/Venue.vue";
 import Reservation from "./views_style_golde/Reservation.vue";
 import Countdown from "./views_style_golde/Countdown.vue";
 import Gift from "./views_style_golde/Gift.vue";
+import Gallery from "./views_style_golde/Gallery.vue";
 
 import BottomNavbar from './components/BottomNavbar.vue'
 import SoundPlayer from './components/SoundPlayer.vue'
@@ -17,6 +18,7 @@ export default {
     Reservation,
     Countdown,
     Gift,
+    Gallery,
     BottomNavbar,
     SoundPlayer
   },
@@ -41,6 +43,7 @@ export default {
     <Reservation/>
     <Countdown/>
     <Gift/>
+    <Gallery/>
   </div>
   <SoundPlayer/>
   <BottomNavbar msg="n" />
