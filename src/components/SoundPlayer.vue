@@ -20,8 +20,8 @@ let data = {
 }
 
 onMounted(() => {
-  audioPlayer.loop = true;
-  clickPlay()
+  // audioPlayer.loop = true;
+  // clickPlay()
 })
 
 function clickPlay(){

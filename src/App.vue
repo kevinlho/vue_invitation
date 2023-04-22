@@ -6,6 +6,9 @@ import Reservation from "./views_style_golde/Reservation.vue";
 import Countdown from "./views_style_golde/Countdown.vue";
 import Gift from "./views_style_golde/Gift.vue";
 import Gallery from "./views_style_golde/Gallery.vue";
+import HealthProtocol from "./views_style_golde/HealthProtocol.vue";
+import InstagramFilter from "./views_style_golde/InstagramFilter.vue";
+import Thankyou from "./views_style_golde/ThankyouPage.vue";
 
 import BottomNavbar from './components/BottomNavbar.vue'
 import SoundPlayer from './components/SoundPlayer.vue'
@@ -19,6 +22,9 @@ export default {
     Countdown,
     Gift,
     Gallery,
+    HealthProtocol,
+    InstagramFilter,
+    Thankyou,
     BottomNavbar,
     SoundPlayer
   },
@@ -44,9 +50,12 @@ export default {
     <Countdown/>
     <Gift/>
     <Gallery/>
+    <HealthProtocol/>
+    <InstagramFilter/>
+    <Thankyou/>
   </div>
   <SoundPlayer/>
-  <BottomNavbar msg="n" />
+<!--  <BottomNavbar msg="n" />-->
 </template>
 
 <style scoped lang="scss">
