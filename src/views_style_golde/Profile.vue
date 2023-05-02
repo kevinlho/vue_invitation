@@ -33,9 +33,7 @@ export default {
 <!--  <HeartHeader/>-->
   <v-container class="ma-0 pa-0 container-root">
     <v-col class="py-10">
-      <div class="text-h3">
-        <p class="quotesTitle creattionFonts goldText text-center">{{titleQuotes.title}}</p>
-      </div>
+      <p class="quotesTitle creattionFonts goldText text-center headerText">{{titleQuotes.title}}</p>
       <p class="quotesMsg text-center defaultText">{{titleQuotes.msg}}</p>
       <p class="quotesDesc text-center">{{titleQuotes.quotes}}</p>
     </v-col>

@@ -31,7 +31,9 @@ export default {
 <template>
   <v-container class="ma-0 pa-0 container-root">
     <v-card class="container-card my-5">
-        <div class="text-h5 text-md-h3"><p class="text-center pt-10 creattionFonts">Wedding Gift</p></div>
+      <div class="text-h3">
+        <p class="text-center pt-10 creattionFonts">Wedding Gift</p>
+      </div>
         <div class="text-body-1 text-center pa-5">For family and friends who would like to send a gift. We would be glad to receive it.</div>
         <v-row class="mx-5 my-3 align-center justify-center">
           <v-col cols="6" md="4" offset="1">

@@ -38,7 +38,7 @@ export default {
 <template>
   <v-container class="ma-0 pa-0 container-root">
     <v-card class="container-card my-5">
-      <div class="text-h5 text-md-h3"><p class="text-center pt-10 creattionFonts defaultText">Our Journey Start Here</p></div>
+      <p class="text-center pt-10 creattionFonts headerText">Our Journey Start Here</p>
       <v-row class="py-5">
         <iframe
             class="container-video ma-auto"
@@ -68,14 +68,14 @@ export default {
         </v-col>
       </v-row>
       <v-row v-for="(item, index) in timeline" class="px-5">
-        <v-col cols="2" class="ma-auto">
+        <v-col cols="4" md="2" class="ma-auto">
           <div class="text-center align-center font-weight-bold">{{item.date}}</div>
         </v-col>
-        <v-col cols="1" class="ma-auto">
+        <v-col cols="8" md="1" class="ma-auto">
           <div style="background-color: black; height: 2px"/>
         </v-col>
-        <v-col col="7" class="ma-auto">
-          <div>{{item.event}}</div>
+        <v-col cols="12" md="9" class="ma-auto">
+          <div class="mb-3">{{item.event}}</div>
         </v-col>
       </v-row>
     </v-card>

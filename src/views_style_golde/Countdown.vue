@@ -4,6 +4,7 @@ export default {
   components:{},
   data(){
     return{
+      weddingDate: new Date("Aug 5, 2023 18:00:00"),
       date:{
         day: "05",
         month: "08",
@@ -17,8 +18,27 @@ export default {
       }
     }
   },
-  mounted() {},
-  methods:{},
+  mounted() {
+    this.intervalListener()
+  },
+  methods:{
+    intervalListener(){
+      let interval = setInterval(()=>{
+        let timeDistance = this.weddingDate.getTime() - new Date().getTime();
+        this.counter.days = Math.floor(timeDistance / (1000 * 60 * 60 * 24));
+        this.counter.hours = Math.floor((timeDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        this.counter.minutes = Math.floor((timeDistance % (1000 * 60 * 60)) / (1000 * 60));
+        this.counter.seconds = Math.floor((timeDistance % (1000 * 60)) / 1000);
+        if(timeDistance <= 0){
+          this.counter.days = 0;
+          this.counter.hours = 0;
+          this.counter.minutes = 0;
+          this.counter.seconds = 0;
+          clearInterval(interval);
+        }
+      }, 1000)
+    }
+  },
   computed:{
     temtems(){
       return[
@@ -32,22 +52,22 @@ export default {
 <template>
   <v-container class="ma-0 pa-0 container-root">
     <v-card class="container-card my-5">
-        <div class="text-h5 text-md-h3"><p class="text-center pt-10 creattionFonts whiteText">Counting down to our happy day!</p></div>
+      <p class="text-center pt-10 creattionFonts whiteText headerText">Counting down to our happy day!</p>
         <v-row class="mx-5 my-3 align-center justify-center">
             <div class="container-countdown-child">
               <div class="text-md-h4 text-center">{{counter.days}}</div>
               <div class="text-center" style="font-size: 10px">Days</div>
             </div>
             <div class="container-countdown-child">
-              <div class="text-md-h4 text-center">{{counter.days}}</div>
+              <div class="text-md-h4 text-center">{{counter.hours}}</div>
               <div class="text-center" style="font-size: 10px">Hours</div>
             </div>
             <div class="container-countdown-child">
-              <div class="text-md-h4 text-center">{{counter.days}}</div>
+              <div class="text-md-h4 text-center">{{counter.minutes}}</div>
               <div class="text-center" style="font-size: 10px">Minutes</div>
             </div>
             <div class="container-countdown-child">
-              <div class="text-md-h4 text-center">{{counter.days}}</div>
+              <div class="text-md-h4 text-center">{{counter.seconds}}</div>
               <div class="text-center" style="font-size: 10px">Seconds</div>
             </div>
           </v-row>

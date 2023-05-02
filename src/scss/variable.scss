@@ -37,3 +37,15 @@ $gold: rgb(197, 167, 87);
 .defaultText{
   color: #363636;
 }
+
+@media (max-width: 1023px) {
+  .headerText{
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .headerText{
+    font-size: 50px;
+  }
+}

@@ -4,16 +4,31 @@ export default {
   components:{},
   data(){
     return{
-      bank1:{
-        bankName: "Bank BCA",
-        bankNo: "1781-3939-71",
-        bankOwner: "Kevin Susanto",
-      },
-      bank2:{
-        bankName: "Bank BCA",
-        bankNo: "1781-3939-71",
-        bankOwner: "Kevin Susanto",
-      },
+      protocol:[
+        {
+          imgPath: './src/assets/icon/protocol/protocol_mask.png',
+          imgDesc: 'Must use masks during the event'
+        },
+        {
+          imgPath: './src/assets/icon/protocol/protocol_distance.png',
+          imgDesc: 'Keeping each other apart when attending events'
+        },
+        {
+          imgPath: './src/assets/icon/protocol/protocol_temperature.png',
+          imgDesc: 'Check the temperature when entering the event room'
+        },{
+          imgPath: './src/assets/icon/protocol/protocol_vaccine.png',
+          imgDesc: 'Minimum second dose of vaccines is required'
+        },
+        {
+          imgPath: './src/assets/icon/protocol/protocol_sanitizer.png',
+          imgDesc: 'Wash hands and use Hand Sanitizer'
+        },
+        {
+          imgPath: './src/assets/icon/protocol/protocol_app.png',
+          imgDesc: 'Check in using the PeduliLindungi App before entering the venue'
+        }
+      ]
     }
   },
   mounted() {},
@@ -35,93 +50,21 @@ export default {
         <div class="text-body-1 text-center pa-5">It’s important to us that everyone stays safe, please read carefully our Wedding Day Covid-19 Guidance before attending the event:</div>
         <v-col>
           <v-row class="py-3">
-            <v-col cols="6">
-              <v-row class="align-center justify-center" style="background-color: red">
-                <div class="align-center">
+            <v-col cols="6" v-for="(item, index) in protocol">
+              <v-row class="ma-1 justify-center" style="background-color: red">
+                <v-cols cols="12" md="4">
                   <v-img
-                      class="mr-3"
+                      class=""
                       width="64px"
                       height="64px"
                       aspect-ratio="1"
-                      src="@/assets/icon/protocol/protocol_mask.png"
+                      :src="item.imgPath"
                   />
-                </div>
-                <div class="align-center justify-center">Must use masks during the event</div>
-              </v-row>
-            </v-col>
-            <v-col cols="6">
-              <v-row class="align-center justify-center" style="background-color: red">
-                <div class="align-center">
-                  <v-img
-                      class="mr-3"
-                      width="64px"
-                      height="64px"
-                      aspect-ratio="1"
-                      src="../assets/icon/protocol/protocol_app.png"
-                  />
-                </div>
-                <div class="align-center justify-center">Must use masks during the event</div>
-              </v-row>
-            </v-col>
-          </v-row>
-          <v-row class="py-3">
-            <v-col cols="6">
-              <v-row class="align-center justify-center" style="background-color: red">
-                <div class="align-center">
-                  <v-img
-                      class="mr-3"
-                      width="64px"
-                      height="64px"
-                      aspect-ratio="1"
-                      src="../assets/icon/protocol/protocol_app.png"
-                  />
-                </div>
-                <div class="align-center justify-center">Must use masks during the event</div>
-              </v-row>
-            </v-col>
-            <v-col cols="6">
-              <v-row class="align-center justify-center" style="background-color: red">
-                <div class="align-center">
-                  <v-img
-                      class="mr-3"
-                      width="64px"
-                      height="64px"
-                      aspect-ratio="1"
-                      src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-                  />
-                </div>
-                <div class="align-center justify-center">Must use masks during the event</div>
-              </v-row>
-            </v-col>
-          </v-row>
-          <v-row class="py-3">
-            <v-col cols="6">
-              <v-row class="align-center justify-center" style="background-color: red">
-                <div class="align-center">
-                  <v-img
-                      class="mr-3"
-                      width="64px"
-                      height="64px"
-                      aspect-ratio="1"
-                      src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-                  />
-                </div>
-                <div class="align-center justify-center">Must use masks during the event</div>
-              </v-row>
-            </v-col>
-            <v-col cols="6">
-              <v-row class="align-center justify-center" style="background-color: red">
-                <div class="align-center">
-                  <v-img
-                      class="mr-3"
-                      width="64px"
-                      height="64px"
-                      aspect-ratio="1"
-                      src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-                  />
-                </div>
-                <div class="align-center justify-center">Must use masks during the event</div>
-              </v-row>
+                </v-cols>
+                <v-cols cols="12" md="8" class="text-center ma-auto">
+                  {{item.imgDesc}}
+                </v-cols>
+                </v-row>
             </v-col>
           </v-row>
         </v-col>

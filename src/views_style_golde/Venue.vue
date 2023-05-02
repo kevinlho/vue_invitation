@@ -25,7 +25,7 @@ export default {
   <v-container class="ma-0 pa-0 container-root">
     <v-card class="container-card my-5">
       <div>
-        <p class="text-center pt-10">Which will be held on</p>
+        <p class="text-center pt-10 creattionFonts headerText">Which will be held on</p>
         <div class="container-card-outer py-5">
           <v-card class="container-card-inner my-6 mx-4">
             <v-col>
@@ -41,11 +41,11 @@ export default {
                 <p class="py-10">{{akad.venue}}</p>
                 <v-row class="button-direction my-5 mx-3">
                   <v-icon
-                      class="goldText"
-                      icon="mdi-map-marker-radius"
-                      size="50"
+                      class="whiteText my-2"
+                      icon="mdi-map-marker"
+                      size="25"
                   />
-                  <p>Get Direction</p>
+                  <p class="whiteText ml-2">Get Direction</p>
                 </v-row>
               </v-col>
             </v-col>
@@ -64,11 +64,11 @@ export default {
                 <p class="py-10">{{akad.venue}}</p>
                 <v-row class="button-direction my-5 mx-3">
                   <v-icon
-                      class="goldText"
-                      icon="mdi-map-marker-radius"
-                      size="50"
+                      class="whiteText my-2"
+                      icon="mdi-map-marker"
+                      size="25"
                   />
-                  <p>Get Direction</p>
+                  <p class="whiteText ml-2">Get Direction</p>
                 </v-row>
               </v-col>
             </v-col>
@@ -130,7 +130,7 @@ export default {
   }
 
   .button-direction{
-    background-color: #3a3a3a;
+    background-color: #a31717;
     display: flex;
     align-items: center;
     justify-content: center;
