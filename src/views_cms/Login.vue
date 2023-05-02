@@ -3,6 +3,8 @@ export default {
   components:{},
   data(){
     return{
+      username: "keps",
+      password: "keps"
     }
   },
   mounted() {},
@@ -12,29 +14,52 @@ export default {
 </script>
 
 <template>
-  <v-container class="ma-0 pa-0 container-root">
-
+  <v-container class="container-root ma-0 pa-0 d-flex">
+      <v-card class="container-card ma-auto d-flex">
+        <v-row class="ma-auto">
+          <v-col class="ma-auto" cols="8" md="3">
+            <v-img
+                class="profileImage my-5"
+                aspect-ratio="1"
+                src="./src/assets/icon/wedding-ring.png"
+            />
+          </v-col>
+          <v-col class="ma-auto" cols="12" md="6">
+            <v-form>
+              <v-text-field
+                  v-model="username"
+                  label="Username"
+              />
+              <v-text-field
+                  v-model="password"
+                  label="Password"
+              />
+              <v-btn type="submit" block class="mt-2">Submit</v-btn>
+            </v-form>
+          </v-col>
+        </v-row>
+      </v-card>
   </v-container>
 </template>
 
 <style scoped lang="scss">
-@import "@/scss/variable.scss";
+
+.container-root{
+  width: 100vw;
+  height: 100vh;
+}
 
 @media (max-width: 1023px) {
-  .container-root{
-    min-width: 100vw;
-  }
-
   .container-card{
-    background-color: $venue_card_inner;
-    max-width: 90vw;
-    margin: auto;
+    min-width: 85vw;
+    min-height: 50vh;
   }
 }
 
 @media (min-width: 1024px) {
-  .container-root{
-    min-width: 100vw;
+  .container-card{
+    min-width: 50vw;
+    min-height: 50vh;
   }
 }
 
