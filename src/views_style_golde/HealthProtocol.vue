@@ -51,10 +51,10 @@ export default {
         <v-col>
           <v-row class="py-3">
             <v-col cols="6" v-for="(item, index) in protocol">
-              <v-row class="ma-1 justify-center" style="background-color: red">
+              <v-row class="ma-1 justify-center">
                 <v-cols cols="12" md="4">
                   <v-img
-                      class=""
+                      class="mb-3"
                       width="64px"
                       height="64px"
                       aspect-ratio="1"

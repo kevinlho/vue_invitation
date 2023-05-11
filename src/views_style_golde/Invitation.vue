@@ -1,17 +1,17 @@
 <script>
-import Home from './views_style_golde/Home.vue'
-import Profile from "./views_style_golde/Profile.vue";
-import Venue from "./views_style_golde/Venue.vue";
-import Reservation from "./views_style_golde/Reservation.vue";
-import Countdown from "./views_style_golde/Countdown.vue";
-import Gift from "./views_style_golde/Gift.vue";
-import Gallery from "./views_style_golde/Gallery.vue";
-import HealthProtocol from "./views_style_golde/HealthProtocol.vue";
-import InstagramFilter from "./views_style_golde/InstagramFilter.vue";
-import Thankyou from "./views_style_golde/ThankyouPage.vue";
+import Home from './Home.vue'
+import Profile from "./Profile.vue";
+import Venue from "./Venue.vue";
+import Reservation from "./Reservation.vue";
+import Countdown from "./Countdown.vue";
+import Gift from "./Gift.vue";
+import Gallery from "./Gallery.vue";
+import HealthProtocol from "./HealthProtocol.vue";
+import InstagramFilter from "./InstagramFilter.vue";
+import Thankyou from "./ThankyouPage.vue";
 
-import BottomNavbar from './components/BottomNavbar.vue'
-import SoundPlayer from './components/SoundPlayer.vue'
+import BottomNavbar from '../components/BottomNavbar.vue'
+import SoundPlayer from '../components/SoundPlayer.vue'
 
 export default {
   components: {

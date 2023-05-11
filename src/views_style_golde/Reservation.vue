@@ -122,6 +122,7 @@ export default {
 @media (max-width: 1023px) {
   .container-root{
     min-width: 100vw;
+    background-color: $profile_bg;
   }
 
   .container-card{
@@ -159,6 +160,7 @@ export default {
 @media (min-width: 1024px) {
   .container-root{
     min-width: 100vw;
+    background-color: $profile_bg;
   }
 
   .container-card{

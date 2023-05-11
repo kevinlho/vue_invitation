@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { createPinia, setMapStoreSuffix } from 'pinia'
 import App from './App.vue'
 
 // Vuetify
@@ -11,6 +11,7 @@ import Router from './router'
 
 const app = createApp(App)
 
+setMapStoreSuffix('')
 app.use(createPinia())
 app.use(vuetify)
 app.use(Router)

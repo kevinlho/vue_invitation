@@ -1,16 +1,26 @@
-<script>
-export default {
-  components:{},
-  data(){
-    return{
-      username: "keps",
-      password: "keps"
+<script setup>
+  import {ref} from "vue";
+  import router from '../router';
+
+  import {useLoginStore} from '../stores/LoginStore'
+  import {useUtilStore} from '../stores/UtilStore'
+
+  const loginStore = useLoginStore();
+  const utilStore = useUtilStore();
+  // const router = useRouter();
+
+  const username = ref("keps")
+  const password = ref("keps")
+
+  function clickLogin(){
+    if(this.username === "keps" && this.password === "keps"){
+      // loginStore.setLogin("keps")
+      router.push({ name: 'InvitationList'})
     }
-  },
-  mounted() {},
-  methods:{},
-  computed:{}
-}
+    else {
+      utilStore.showSnackbar("Password Salah")
+    }
+  }
 </script>
 
 <template>
@@ -34,7 +44,7 @@ export default {
                   v-model="password"
                   label="Password"
               />
-              <v-btn type="submit" block class="mt-2">Submit</v-btn>
+              <v-btn type="submit" block class="mt-2" @click="clickLogin()">Login</v-btn>
             </v-form>
           </v-col>
         </v-row>

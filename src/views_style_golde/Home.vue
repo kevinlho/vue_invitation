@@ -26,12 +26,12 @@ export default {
             <v-icon
                 class="goldText"
                 icon="mdi-bookmark"
-                size="50"
+                size="25"
             />
             <v-col class="pa-0 ma-0 border-seperator"/>
           </v-row>
           <v-row class="align-center justify-center">
-            <p class="text-center card-text">
+            <p class="text-center card-text ma-3">
               {{body}}
             </p>
           </v-row>
