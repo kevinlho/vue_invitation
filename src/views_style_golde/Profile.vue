@@ -20,7 +20,7 @@ export default {
       brideDetail:{
         name: "Tiffany Thunung Pitoby",
         father: "Piter Thinung Pitoby",
-        mother: "Merry Sia"
+        mother: "Merry Christin Diana Sia"
       }
     }
   },
