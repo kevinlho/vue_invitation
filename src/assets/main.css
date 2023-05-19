@@ -7,8 +7,19 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "GothamBook";
+  src: url('../fonts/GothamBook.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .creattionFonts{
   font-family: Creattion;
+}
+
+body{
+  font-family: "GothamBook"
 }
 
 #app {
@@ -24,6 +35,16 @@ a,
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 
 @media (hover: hover) {

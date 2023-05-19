@@ -32,24 +32,24 @@ const router = createRouter({
             }
         },
     ],
-    history: createWebHashHistory()
+    history: createWebHistory()
 })
 
-router.beforeEach((to, from, next)=>{
-    // const loginStore = useLoginStore();
-    if (to.meta.requireAuth) {
-        // this route requires auth, check if logged in
-        // if not, redirect to login page.
-        // if(!loginStore.isLogin){
-        //     next({route: '/login'})
-        // }
-        // else {
-        //     next()
-        // }
-        next()
-    } else {
-        next() // does not require auth, make sure to always call next()!
-    }
-})
+// router.beforeEach((to, from, next)=>{
+//     const loginStore = useLoginStore();
+//     if (to.meta.requireAuth) {
+//         // this route requires auth, check if logged in
+//         // if not, redirect to login page.
+//         if(!loginStore.isLogin){
+//             next({route: '/login'})
+//         }
+//         else {
+//             next()
+//         }
+//         // next()
+//     } else {
+//         next() // does not require auth, make sure to always call next()!
+//     }
+// })
 
 export default router

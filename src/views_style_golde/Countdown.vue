@@ -52,7 +52,7 @@ export default {
 <template>
   <v-container class="ma-0 pa-0 container-root">
     <v-card class="container-card my-5">
-      <p class="text-center pt-10 creattionFonts whiteText headerText">Counting down to our happy day!</p>
+      <p class="text-center creattionFonts whiteText headerText">Counting down to our happy day!</p>
         <v-row class="mx-5 my-3 align-center justify-center">
             <div class="container-countdown-child">
               <div class="text-md-h4 text-center">{{counter.days}}</div>

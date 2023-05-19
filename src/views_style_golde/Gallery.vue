@@ -38,7 +38,7 @@ export default {
 <template>
   <v-container class="ma-0 pa-0 container-root">
     <v-card class="container-card my-5">
-      <p class="text-center pt-10 creattionFonts headerText">Our Journey Start Here</p>
+      <p class="text-center creattionFonts headerText">Our Journey Start Here</p>
       <v-row class="py-5">
         <iframe
             class="container-video ma-auto"

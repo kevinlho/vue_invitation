@@ -15,7 +15,7 @@ export default {
 
 <template>
   <v-container class="ma-0 pa-0 container-root">
-    <div class="text-h5 text-md-h3"><p class="text-center pt-10 creattionFonts defaultText mb-5">Thank You</p></div>
+    <p class="text-center creattionFonts headerText defaultText">Thank You</p>
     <v-img
         class="profileImage ma-auto"
         width="60vw"

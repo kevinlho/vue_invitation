@@ -46,7 +46,7 @@ export default {
 <template>
   <v-container class="ma-0 pa-0 container-root">
     <v-card class="container-card my-5">
-        <div class="text-h5 text-md-h3"><p class="text-center pt-10 creattionFonts">Health Protocol</p></div>
+      <p class="quotesTitle creattionFonts text-center headerText">Health Protocol</p>
         <div class="text-body-1 text-center pa-5">It’s important to us that everyone stays safe, please read carefully our Wedding Day Covid-19 Guidance before attending the event:</div>
         <v-col>
           <v-row class="py-3">

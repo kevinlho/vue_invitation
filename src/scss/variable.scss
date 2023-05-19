@@ -43,12 +43,14 @@ $gold: rgb(197, 167, 87);
 
 @media (max-width: 1023px) {
   .headerText{
-    font-size: 25px;
+    padding-top: 20px;
+    font-size: 40px;
   }
 }
 
 @media (min-width: 1024px) {
   .headerText{
+    padding-top: 30px;
     font-size: 50px;
   }
 }

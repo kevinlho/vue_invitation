@@ -1,10 +1,11 @@
 // stores/counter.js
 import { defineStore } from 'pinia'
+import {getLoginData, setLoginData} from "../utils/LocalStorage";
 
 export const useLoginStore = defineStore('loginStore', {
     state: () => {
         return {
-            username : "HEHJEIHJE",
+            username : getLoginData(),
             isLogin: false
         }
     },
@@ -12,7 +13,7 @@ export const useLoginStore = defineStore('loginStore', {
     // state: () => ({ count: 0 })
     actions: {
         setLogin(loginData){
-            this.username = loginData
+            setLoginData(loginData)
             this.isLogin = true
         }
     },

@@ -25,7 +25,7 @@ export default {
   <v-container class="ma-0 pa-0 container-root">
     <v-card class="container-card my-5">
       <div>
-        <p class="text-center pt-10 creattionFonts headerText">Which will be held on</p>
+        <p class="text-center creattionFonts headerText">Which will be held on</p>
         <div class="container-card-outer py-5">
           <v-card class="container-card-inner my-6 mx-4">
             <v-col>

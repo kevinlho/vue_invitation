@@ -19,8 +19,8 @@ export default {
       },
       brideDetail:{
         name: "Tiffany Thunung Pitoby",
-        father: "Heri Susanto",
-        mother: "Herlina Gozali"
+        father: "Piter Thinung Pitoby",
+        mother: "Merry Sia"
       }
     }
   },
@@ -32,7 +32,7 @@ export default {
 <template>
 <!--  <HeartHeader/>-->
   <v-container class="ma-0 pa-0 container-root">
-    <v-col class="py-10">
+    <v-col>
       <p class="quotesTitle creattionFonts goldText text-center headerText">{{titleQuotes.title}}</p>
       <p class="quotesMsg text-center defaultText">{{titleQuotes.msg}}</p>
       <p class="quotesDesc text-center">{{titleQuotes.quotes}}</p>
@@ -45,12 +45,12 @@ export default {
             src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
         />
         <v-col style="padding-top: 15px">
-          <p class="text-h6">{{groomDetail.name}}</p>
+          <p class="text-h5 defaultText">{{groomDetail.name}}</p>
           <div class="borderSeperator"/>
-          <p>Son of</p>
-          <p>{{groomDetail.father}}</p>
-          <p>&</p>
-          <p>{{groomDetail.mother}}</p>
+          <p class="defaultText">Son of :</p>
+          <p class="defaultText">{{groomDetail.father}}</p>
+          <p class="defaultText">&</p>
+          <p class="defaultText">{{groomDetail.mother}}</p>
         </v-col>
       </v-col>
       <v-col>
@@ -60,12 +60,12 @@ export default {
             src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
         />
         <v-col style="padding-top: 15px">
-          <p class="text-h6">{{brideDetail.name}}</p>
+          <p class="text-h5 defaultText">{{brideDetail.name}}</p>
           <div class="borderSeperator"/>
-          <p>Daughter of</p>
-          <p>{{brideDetail.father}}</p>
-          <p>&</p>
-          <p>{{brideDetail.mother}}</p>
+          <p class="defaultText">Daughter of :</p>
+          <p class="defaultText">{{brideDetail.father}}</p>
+          <p class="defaultText">&</p>
+          <p class="defaultText">{{brideDetail.mother}}</p>
         </v-col>
       </v-col>
     </div>

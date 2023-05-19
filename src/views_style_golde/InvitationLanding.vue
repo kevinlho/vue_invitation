@@ -26,15 +26,14 @@ export default {
 
 <template>
 <!--  <HeartHeader/>-->
-  <v-container class="ma-0 pa-0 container-root d-flex">
+  <div class="ma-0 pa-0 container-root d-flex">
     <v-card class="container-card ma-auto">
       <v-row>
         <v-col cols="12" md="4">
           <v-img
-              transition="scroll-x-transition"
               class="ma-auto"
               width="60vw"
-              height="80vw"
+              aspect-ratio="0.75"
               cover
               src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
           />
@@ -54,7 +53,7 @@ export default {
         </v-col>
       </v-row>
     </v-card>
-  </v-container>
+  </div>
 </template>
 
 <style scoped lang="scss">
@@ -90,6 +89,11 @@ export default {
   .button-invitation{
     background-color: $landing_button;
   }
+
+  imageSize{
+    width: 60vw;
+    height: 80vh;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -121,6 +125,11 @@ export default {
 
   .button-invitation{
     background-color: $landing_button;
+  }
+
+  imageSize{
+    width: 45vw;
+    height: 60vh;
   }
 }
 </style>

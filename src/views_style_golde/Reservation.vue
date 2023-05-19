@@ -67,7 +67,7 @@ export default {
   <v-container class="ma-0 pa-0 container-root">
     <v-card class="container-card my-5">
       <div>
-        <p class="text-center pt-10 creattionFonts headerText">Reservation</p>
+        <p class="text-center creattionFonts headerText">Reservation</p>
         <div class="container-card-outer py-5">
           <v-card class="container-card-inner-form my-6 mx-4">
             <v-col>

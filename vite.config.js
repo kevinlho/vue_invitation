@@ -8,7 +8,7 @@ const path = require('path')
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/vue_invitation/',
+  base: '/',
   css:{
     loaderOptions:{
       sass:{

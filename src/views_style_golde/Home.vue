@@ -18,9 +18,7 @@ export default {
   <v-container class="container-root">
     <v-card class="container-card">
         <v-col>
-          <v-row class="text-h2 align-center justify-center">
-            <p class="creattionFonts goldText">{{title}}</p>
-          </v-row>
+          <p class="quotesTitle creattionFonts goldText text-center headerText">{{title}}</p>
           <v-row class="py-5 align-center justify-center">
             <v-col class="pa-0 ma-0 border-seperator"/>
             <v-icon
