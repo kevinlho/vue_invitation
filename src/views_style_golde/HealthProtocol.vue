@@ -1,31 +1,37 @@
 <script>
-import protocol_app from '../assets/icon/protocol/protocol_app.png'
+import protocol_mask from '@/assets/icon/protocol/protocol_mask.png'
+import protocol_distance from '@/assets/icon/protocol/protocol_distance.png'
+import protocol_temperature from '@/assets/icon/protocol/protocol_temperature.png'
+import protocol_vaccine from '@/assets/icon/protocol/protocol_vaccine.png'
+import protocol_sanitizer from '@/assets/icon/protocol/protocol_sanitizer.png'
+import protocol_app from '@/assets/icon/protocol/protocol_app.png'
+
 export default {
   components:{},
   data(){
     return{
       protocol:[
         {
-          imgPath: './src/assets/icon/protocol/protocol_mask.png',
+          imgPath: protocol_mask,
           imgDesc: 'Must use masks during the event'
         },
         {
-          imgPath: './src/assets/icon/protocol/protocol_distance.png',
+          imgPath: protocol_distance,
           imgDesc: 'Keeping each other apart when attending events'
         },
         {
-          imgPath: './src/assets/icon/protocol/protocol_temperature.png',
+          imgPath: protocol_temperature,
           imgDesc: 'Check the temperature when entering the event room'
         },{
-          imgPath: './src/assets/icon/protocol/protocol_vaccine.png',
+          imgPath: protocol_vaccine,
           imgDesc: 'Minimum second dose of vaccines is required'
         },
         {
-          imgPath: './src/assets/icon/protocol/protocol_sanitizer.png',
+          imgPath: protocol_sanitizer,
           imgDesc: 'Wash hands and use Hand Sanitizer'
         },
         {
-          imgPath: './src/assets/icon/protocol/protocol_app.png',
+          imgPath: protocol_app,
           imgDesc: 'Check in using the PeduliLindungi App before entering the venue'
         }
       ]
