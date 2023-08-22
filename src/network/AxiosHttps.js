@@ -1,14 +1,26 @@
 import axios from 'axios';
-import URLS from './AxiosUrls';
 
 import {showSnackbar} from "../utils/snackbar";
+
+const URLS = {
+    BASE_URL: 'https://dummyjson.com',
+    LOGIN: '/auth/login', //post
+    INVITATION_LIST: '/products' // get
+}
 
 async function http_axios(axiosConfig){
     const axiosInstance = axios.create({
         ...axiosConfig,
         baseURL: URLS.BASE_URL,
     });
-    // axios.interceptors.response.use()
+    axiosInstance.interceptors.request.use(request => {
+        console.log('Starting Request', JSON.stringify(request.data, null, 2))
+        return request
+    })
+    axiosInstance.interceptors.response.use(response => {
+        console.log('Response:', JSON.stringify(response, null, 2))
+        return response
+    })
     return axiosInstance(axiosConfig);
 }
 
@@ -62,7 +74,7 @@ function statusHandler(response, requestConfig){
                 return response.data
             default:
                 showSnackbar("error")
-                axiosHttpLogBuilder(response, requestConfig);
+                // axiosHttpLogBuilder(response, requestConfig);
                 return null
         }
     }
@@ -84,6 +96,7 @@ function axiosCatchLogBuilder(err){
 }
 
 export {
+    URLS,
     axiosGet,
     axiosPost,
     getAxiosLocalJson

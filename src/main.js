@@ -7,7 +7,7 @@ import vuetify from "./plugins/vuetify";
 
 import './assets/main.css'
 
-import Router from './router'
+import Router from './router/router'
 
 const app = createApp(App)
 

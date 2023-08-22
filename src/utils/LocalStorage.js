@@ -18,6 +18,7 @@ function getLocalStorage(key){
     }
 }
 
+// setLoginData
 function setLoginData(username, isLogin, expired){
     let loginData = {
         username: username,
@@ -26,12 +27,20 @@ function setLoginData(username, isLogin, expired){
     }
     setLocalStorage(LS_KEY_LOGIN, JSON.stringify(loginData))
 }
+
+//return JSON loginData
 function getLoginData(){
     let jsonLoginData = JSON.parse(getLocalStorage(LS_KEY_LOGIN))
     if(jsonLoginData){
         return jsonLoginData
     }
     return null
+    //
+    // return {
+    //     username: null,
+    //     isLogin: false,
+    //     expired: null
+    // }
 }
 
 export {

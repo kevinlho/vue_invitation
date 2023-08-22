@@ -1,8 +1,7 @@
 <script setup>
   import {ref, onMounted} from "vue";
-  import router from '../router';
-  import {axiosGet} from '../network/AxiosHttps'
-  import URLS from '../network/AxiosUrls'
+  import router from '../router/router';
+  import {axiosPost, URLS} from '../network/AxiosHttps'
 
   import {useLoginStore} from '../stores/LoginStore'
   import {useUtilStore} from '../stores/UtilStore'
@@ -15,33 +14,39 @@
   const username = ref("keps")
   const password = ref("keps")
 
-  onMounted(()=>{
-    getExistingLogin()
-  })
+  // onMounted(()=>{
+  //   getExistingLogin()
+  // })
+  //
+  // function getExistingLogin(){
+  //   let loginData = getLoginData()
+  //   if(loginData.isLogin){
+  //     router.push({ name: 'InvitationList'})
+  //   }
+  // }
 
-  function getExistingLogin(){
-    let loginData = getLoginData()
-    alert(loginData.isLogin)
-    if(loginData.isLogin){
-      router.push({ name: 'InvitationList'})
-    }
-  }
-
-  async function clickLogin(){
+  function clickLogin(){
     if(this.username === "keps" && this.password === "keps"){
       let body = {
-        username: this.username,
-        password: this.password
+        // username: this.username,
+        // password: this.password
+        username: 'kminchelle',
+        password: '0lelplR',
       }
-      let loginResponse = await axiosGet(URLS.LOGIN, null, null)
-      if(loginResponse){
-        setLoginData({
-          username: "kepbzbzs",
-          isLogin: true,
-          exp: null
-        })
-        router.push({ name: 'InvitationList'})
-      }
+      axiosPost(URLS.LOGIN, null, body, null)
+      .then((loginResult)=>{
+        console.log(loginResult)
+        if(loginResult){
+          let loginData = {
+            username: loginResult.username,
+            isLogin: true,
+            exp: null
+          }
+
+          loginStore.setLogin(loginData) //set to Login Store
+          router.push({name: 'InventoryList'})
+        }
+      })
     }
     else {
       utilStore.showSnackbar("Password Salah")
